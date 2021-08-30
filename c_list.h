@@ -5,19 +5,17 @@
 
 using namespace std;
 
-struct List {
+typedef struct List {
   List *previous;
   List *next;
+  List *last;
   int data;
   int list_index;
   size_t list_size;
 };
 
 List *create_list();
-
-int add_list_element(List*);
-
-int remove_list_element(List*, int);
-
-int delete_list(List*);
+int add_ele(List*);
+int rm_ele(List*, int);
+int del_list(List*);
 #endif
